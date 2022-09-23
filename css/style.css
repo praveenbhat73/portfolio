@@ -23,6 +23,15 @@ body{
     color: var(--bg-color);
     background: var(--body-color);
 }
+html::-webkit-scrollbar{
+    width: .5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    
+    background: var(--heading-color);
+}
+
 img{
     width:100%;
 
@@ -234,8 +243,22 @@ background-color: var(--body-color);
 .about-data span{
     font-size: 1rem;
     font-weight: 500;
+    color: var(--main-color);
+}
+.about-data p{
+    margin-top: 10px;
+    letter-spacing: normal;
+}
+.about-text span{
+    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
     color: var(--main-color);
+   
+}
+.about-text a{
+    color: white;
+    margin-right: 5px;
 }
 .about-data h2{
     font-size: 2rem;
@@ -264,10 +287,22 @@ background-color: var(--body-color);
 }
 
 .about-text p{
+    margin-top: 10px;
     font-size: .938rem;
     letter-spacing: 1px;
     text-align: justify;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+}
+
+.about-text h5{
+    margin-top: 0;
+}
+.about-text .year{
+    color: gray;
+    margin-left: 4px;
+    font-size: 13px;
+
 }
 .skills-content{
     display: grid;
@@ -409,4 +444,159 @@ background-color: var(--body-color);
     font-size: .9rem;
     font-weight: 400;
     color: white
+}
+
+.scroll-top{
+    position: fixed;
+   bottom: -100%;
+    right: 1.5rem;
+}
+.scroll-top .bx{
+    padding: 8px;
+    font-size: 1.3rem;
+    color: var(--bg-color);
+    background: var(--box-color);
+    border-radius: .2rem;
+}
+.scroll-top .bx:hover{
+    background: var(--container-color);
+    transition: .3s all linear;
+}
+.scroll-active{
+    bottom: 2rem;
+    transition: .3s;
+}
+
+/* responsive  */
+
+@media(max-width:892px){
+    section{
+        padding: 2rem 0;
+
+    }
+    .nav{
+        padding: 12px 0;
+
+    }
+    .heading{
+        font-size: 4rem;
+
+    }
+    .portfolio-box{
+        height: 257px;
+    }
+}
+
+@media(max-width:775px){
+    .nav{
+        padding: 10px 0;
+
+    }
+    .logo{
+        font-size: 1.1rem;
+    }
+    .home{
+        min-height: 500px;
+        padding-top: 6rem;
+
+    }
+    .home-text h3{
+        font-size: 1rem;
+        color: var(--main-color);
+    }
+    .home-text p{
+        font-size: .825rem;
+    }
+    .skills-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .portfolio-box{
+        height: 245px;
+    }
+    .portfolio-box img{
+        object-fit: cover;
+        object-position: center;
+    }
+    .menu-icon{
+        display: flex;
+    }
+    .navbar{
+        position:absolute;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        background: var(--box-color);
+        transition:  .5s all cubic-bezier(.075,.82,.165,1);
+    }
+    .open-menu{
+        right: 0;
+        transition:  .5s all cubic-bezier(.075,.82,.165,1);
+    }
+    .nav-link{
+        display: block;
+        margin: 1rem 0;
+    }
+
+}
+
+@media (max-width:635px){
+    .about-content{
+        grid-template-columns: 1fr;
+    }
+    .about-data span{
+        font-size: .9rem;
+    }
+    .about-data h2{
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+        font-weight: 600;
+        margin: .8rem 0;
+    }
+    .about-text p{
+        font-size: .825rem;
+        margin-bottom: 1.3rem;
+    }
+}
+@media (max-width:450px)
+{
+    .home{
+        min-height: 485px;
+        padding-top: 5rem;
+
+    }
+    .home-img{
+        width: 140px;
+        height: 140px;
+    }
+    .home-text h2{
+        font-size: 2.1rem;
+        line-height: 3.2rem;
+    }
+    .home-text p br{
+        display: contents;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .about-data h2{
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+        margin: .6rem  ;
+    }
+    .skills-content,.portfolio-content{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:325px){
+    .navbar{
+        width: 100%;
+    }
+    .portfolio-box{
+        height: 190px;
+    }
 }
