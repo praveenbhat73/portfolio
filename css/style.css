@@ -159,6 +159,15 @@ background-color: var(--body-color);
     object-fit: cover;
     object-position: center;
 }
+.home-img img{
+    height: 198px;
+    object-fit: cover;
+}
+.home-img:hover{
+    transform: scale(1.05);
+    transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 2px 5px 10px #888888;
+}
 .home-text{
     display: flex;
     flex-direction: column;
@@ -322,6 +331,7 @@ background-color: var(--body-color);
 .skills-box:hover{
     transform: scale(1.05);
     transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 2px 5px 10px #888888;
 }
 .skills-box .bx{
     font-size: 1.4rem;
@@ -358,6 +368,11 @@ background-color: var(--body-color);
     border-radius: 5px;
     border: 1px solid var(--bg-color);
     overflow: hidden;
+}
+.portfolio-box:hover{
+    transform: scale(1.05);
+    transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 2px 5px 10px #888888;
 }
 .portfolio-img{
     width: 100%;
@@ -465,6 +480,7 @@ background-color: var(--body-color);
 .scroll-active{
     bottom: 2rem;
     transition: .3s;
+    z-index: 3000;
 }
 
 /* responsive  */
