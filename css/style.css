@@ -316,7 +316,7 @@ background-color: var(--body-color);
 }
 .skills-content{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     gap: 2rem;
 }
 .skills-box {
@@ -531,7 +531,7 @@ background-color: var(--body-color);
         font-size: .825rem;
     }
     .skills-content{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
     }
     .portfolio-box{
         height: 245px;
